@@ -1,0 +1,137 @@
+﻿@{
+    Layout = "_Layout";
+}
+@section styles
+{
+    <link href="~/css/webflow-style.css" rel="stylesheet" type="text/css" />
+}
+
+<head><title>Contact Us
+</title></head>
+
+
+<div class="breadcrumb-section wf-section">
+    @{
+        Html.RenderPartial("Menu/_MainMenu");
+    }
+    <div class="container w-container">
+        <div class="breadcrumb-wrapper">
+            <h1 class="breadcrumb-title">Contact Us</h1>
+            <div class="breadcrumb-link-block">
+                <a href="/" class="breadcrumb-backlink">Home</a>
+                <div class="line-shape-block"></div>
+                <div class="current-page-name">Contact</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="contact-page-section wf-section">
+    <div class="container w-container">
+        <div class="contact-wrapper">
+            <div class="contact-content-side">
+                <div class="contact-section-title-block">
+                    <h2 class="section-title">Contact Information</h2>
+                    <p class="section-pragraph">
+                        Decoral is one of the most popular Travel agency for those who
+                        want to explore the wold and try to make adventure provide the
+                        best design
+                    </p>
+                </div>
+                <div data-w-id="c2d9bb81-f99c-85d7-3189-b2cc3db3857d"
+                     style="opacity: 0"
+                     class="contact-content-inner">
+                    <div class="contact-number-block">
+                        <a href="tel:012345678987" class="phone-number contact-page">T: +12345 658 987</a><a href="tel:012345678987" class="phone-number contact-page">(038) 12345 678 901</a>
+                    </div>
+                    <address class="address-block contact-page">
+                        <div class="footer-address-text contact-page">
+                            A: 75 North Street City <br />New York, NY 1010, USA
+                        </div>
+                    </address>
+                    <div class="mail-address-block">
+                        <a href="mailto:Info@example.com"
+                           class="mail-address contact-page">A: Info@example.com</a><a href="#" class="website-link contact-page">admin@example.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-map-side">
+                <div class="map-wrapper">
+                    <div class="w-richtext">
+                        <figure style="padding-bottom: 75%"
+                                class="w-richtext-align-fullwidth w-richtext-figure-type-video">
+                            <div>
+                                <iframe allowfullscreen="true"
+                                        frameborder="0"
+                                        scrolling="no"
+                                        src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.google.com%2Fmaps%2Fembed%2Fv1%2Fplace%3Fcenter%3D40.7178143%252C-74.0781629%26key%3DAIzaSyD9HrlRuI1Ani0-MTZ7pvzxwxi4pgW0BCY%26zoom%3D13%26q%3DNew%2BYork%2C%2BNY%2C%2BUSA&amp;display_name=Google+Maps&amp;url=https%3A%2F%2Fwww.google.com%2Fmaps%2Fplace%2FNew%2BYork%2C%2BNY%2C%2BUSA%2F%4040.7178143%2C-74.0781629%2C13z%2Fdata%3D%214m5%213m4%211s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62%218m2%213d40.7127766%214d-74.0059769%3Fshorturl%3D1&amp;image=http%3A%2F%2Fmaps-api-ssl.google.com%2Fmaps%2Fapi%2Fstaticmap%3Fcenter%3D40.7178143%2C-74.0781629%26zoom%3D15%26size%3D250x250%26sensor%3Dfalse&amp;key=96f1f04c5f4143bcb0f2e68c87d65feb&amp;type=text%2Fhtml&amp;schema=google"
+                                        title="New York, NY, USA"></iframe>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br /><br /><br /><br />
+        <div style="justify-content: space-between; align-content: center; display:flex">
+            <div class="contact-form-left-block">
+                <div class="contact-thumbnail">
+                    <img src="~/images/image.png" loading="lazy" alt="Image" />
+                </div>
+            </div>
+            <div class="contact-form-right-block">
+                <h3 class="form-tilte">
+                    Leave a Message for any kind of information
+                </h3>
+                <div class="form-block w-form">
+                    <form id="email-form"
+                          name="email-form"
+                          data-name="Email Form"
+                          method="get"
+                          class="agency-form">
+                        <input type="text"
+                               class="form-field w-node-e6e2ea25-b51f-b27b-341f-55baa554db5f-0480df9f w-input"
+                               maxlength="256"
+                               name="First-Name"
+                               data-name="First Name"
+                               placeholder="First Name"
+                               id="First-Name-3"
+                               required="" /><input type="tel"
+                                                    class="form-field w-node-e6e2ea25-b51f-b27b-341f-55baa554db61-0480df9f w-input"
+                                                    maxlength="256"
+                                                    name="Phone-2"
+                                                    data-name="Phone 2"
+                                                    placeholder="Phone Number"
+                                                    id="Phone-2"
+                                                    required="" /><input type="email"
+                                                                         class="form-field w-node-e6e2ea25-b51f-b27b-341f-55baa554db62-0480df9f w-input"
+                                                                         maxlength="256"
+                                                                         name="Email-4"
+                                                                         data-name="Email 4"
+                                                                         placeholder="Email Address"
+                                                                         id="Email-4"
+                                                                         required="" /><textarea placeholder="Write here"
+                                                                                                 maxlength="5000"
+                                                                                                 id="field-2"
+                                                                                                 name="field-2"
+                                                                                                 data-name="Field 2"
+                                                                                                 required=""
+                                                                                                 class="form-field form-textarea max-height-200px w-node-e6e2ea25-b51f-b27b-341f-55baa554db63-0480df9f w-input"></textarea><input type="submit"
+                                                                                                                                                                                                                                  value="Send now"
+                                                                                                                                                                                                                                  data-wait="Please wait..."
+                                                                                                                                                                                                                                  id="w-node-e6e2ea25-b51f-b27b-341f-55baa554db64-0480df9f"
+                                                                                                                                                                                                                                  class="button-primary contact-button w-button" />
+                    </form>
+                    <div class="w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                        <div>
+                            Oops! Something went wrong while submitting the form.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿<section class="subscribe-section">
+    <div class="container w-container">
+        <div class="newsletter-wrapper">
+            <div class="section-title subscribe-section-title">
+                <h2 class="title subscribe-title">
+                    Subscribe our Newsletter to get latest update and news
+                </h2>
+                <p data-w-id="a72013cd-26fa-04a3-26d6-2086b30d5ae9"
+                   class="section-pragraph subscribe-text">
+                    We recommended you to subscribe to our newsletter, enter your
+                    email below to get our latest updates, news, promotions and so
+                    on
+                </p>
+            </div>
+            <div class="subscribe-form w-form">
+                <form asp-controller="Home"
+                      asp-action="Subscribe"
+                      method="post"
+                      class="subscribe-from-container">
+                    <input class="subscribe-input w-input"
+                           maxlength="256"
+                           name="email"
+                           placeholder="Enter your email here"
+                           type="email"
+                           required />
+                    <input type="submit" value="Subscribe" class="subscribe-button w-button" />
+                </form>
+                <div id="subscribe-message"></div>
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        @if (TempData["Message"] != null)
+        {
+            <div class="@TempData["MessageClass"]">
+                @TempData["Message"]
+            </div>
+        }
+</section>

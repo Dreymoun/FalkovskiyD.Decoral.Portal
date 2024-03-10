@@ -1,0 +1,107 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section styles
+{
+    <link href="~/css/webflow-style.css" rel="stylesheet" type="text/css" />
+}
+<head>
+    <title>Login</title>
+</head>
+
+<div class="breadcrumb-section wf-section">
+    @{
+        Html.RenderPartial("Menu/_MainMenu");
+    }
+    <div class="container w-container">
+        <div class="breadcrumb-wrapper">
+            <h1 class="breadcrumb-title">Login</h1>
+            <div class="breadcrumb-link-block">
+                <a href="/" class="breadcrumb-backlink">Home</a>
+                <div class="line-shape-block"></div>
+                <div class="current-page-name">login</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="login-section wf-section">
+    <div class="container w-container">
+        <div class="login-wrapper">
+            <div class="login-left-side">
+                <div class="login-top">
+                    <h2 class="login-title">Login to Decoral</h2>
+                    <p class="login-details">
+                        Decoral is one of the most popular Interior design agency for
+                        those who want to explore the wold and try to make
+                        adventure<br />
+                    </p>
+                </div>
+                <div class="login-form-block">
+                    <div class="form-block w-form">
+                        <form id="wf-form-Login-Form"
+                              name="wf-form-Login-Form"
+                              data-name="Login Form"
+                              method="get"
+                              class="login-form">
+                            <input type="text"
+                                   class="form-field w-input"
+                                   maxlength="256"
+                                   name="name"
+                                   data-name="Name"
+                                   placeholder="Username"
+                                   id="name"
+                                   required="" /><input type="password"
+                                                        class="form-field w-input"
+                                                        maxlength="256"
+                                                        name="Password"
+                                                        data-name="Password"
+                                                        placeholder="Password"
+                                                        id="Password"
+                                                        required="" />
+                            <div id="w-node-dc2e88b6-582d-0fbf-4df0-c71b35a112b5-dc872af9"
+                                 class="forget-password-block">
+                                <label class="w-checkbox form-checkbox">
+                                    <input type="checkbox"
+                                           name="Checkbox"
+                                           id="Checkbox"
+                                           data-name="Checkbox"
+                                           required=""
+                                           class="w-checkbox-input checkbox" /><span class="checkbox-label w-form-label"
+                                                                                     for="Checkbox">Remember Me</span>
+                                </label><a href="#" class="forget-password">Forgot Password</a>
+                            </div>
+                            <div class="button-block login-block">
+                                <input type="submit"
+                                       value="Login"
+                                       data-wait="Please wait..."
+                                       class="button-primary w-button" /><a href="/register" class="register-link">Register</a>
+                            </div>
+                        </form>
+                        <div class="w-form-done">
+                            <div>Thank you! Your submission has been received!</div>
+                        </div>
+                        <div class="w-form-fail">
+                            <div>
+                                Oops! Something went wrong while submitting the form.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="login-right-side">
+                <div class="banner-block-right">
+                    <div class="image-wrapper animate-in">
+                        <div class="image-overlay"></div>
+                        <img src="~/images/image-3.jpg"
+                             loading="lazy"
+                             srcset=" ~/images/image-3-p-500.jpg 500w, images/image-3.jpg 526w"
+                             alt="banner image"
+                             sizes="(max-width: 479px) 94vw, (max-width: 740px) 71vw, (max-width: 991px) 526px, (max-width: 1279px) 455.6875px, 526px"
+                             class="media-fit-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

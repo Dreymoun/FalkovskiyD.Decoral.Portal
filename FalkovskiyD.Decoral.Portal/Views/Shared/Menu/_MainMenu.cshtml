@@ -1,0 +1,82 @@
+﻿<div class="container w-container">
+    <div class="header-top">
+        <div>
+            Call us:
+            <a href="tel:12345678910" class="header-contact-number">+012345 678 910</a>
+        </div>
+        <div class="admin-block">
+            @if (string.IsNullOrEmpty(Context.Request.Cookies["UserName"]))
+            {
+                <a href="@Url.Action("AuthorizationPage", "Register")" class="admin-link">Login</a>
+                <div>/</div>
+                <a href="@Url.Action("RegisterPage", "Register")" class="admin-link">Register</a>
+            }
+            else
+            {
+                <span class="user-name">@Context.Request.Cookies["UserName"]</span>
+                <div>/</div>
+                <a href="@Url.Action("Logout", "Register")" class="admin-link">Logout</a>
+            }
+        </div>
+
+    </div>
+    <div class="header-navigation">
+        <div data-animation="default"
+             data-collapse="medium"
+             data-duration="400"
+             data-easing="ease"
+             data-easing2="ease"
+             role="banner"
+             class="header-navbar w-nav">
+            <div class="navbar-wrapper">
+                <a href="~/"
+                   aria-current="page"
+                   class="navbar-brand w-nav-brand w--current">
+                    <img src="~/images/logo.png"
+                         loading="lazy"
+                         alt="Project Logo"
+                         class="logo-image" />
+                </a>
+                <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+                    <ul role="list" class="nav-menu w-list-unstyled">
+                        <li><a href="@Url.Action("Index", "Home")" class="nav-link">Home</a></li>
+                        <li><a href="@Url.Action("Project", "Home")" class="nav-link">Project</a></li>
+                        <li><a href="~/service" class="nav-link">Services</a></li>
+                        <li>
+                            <div data-hover="false"
+                                 data-delay="0"
+                                 class="nav-dropdown w-dropdown">
+                                <div class="nav-dropdown-toggle w-dropdown-toggle">
+                                    <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                    <div>Pages</div>
+                                </div>
+                                <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                                    <a href="~/about"
+                                       class="nav-dropdown-link w-dropdown-link">About Us</a>
+                                    <a href="~/team"
+                                       class="nav-dropdown-link w-dropdown-link">Team</a>
+                                    <a href="~/testimonial"
+                                       class="nav-dropdown-link w-dropdown-link">Testimonial</a>
+                                    <a href="~/blog"
+                                       class="nav-dropdown-link w-dropdown-link">Blog</a>
+                                    <a href="~/faq"
+                                       class="nav-dropdown-link w-dropdown-link">FAQ</a>
+                                    <a href="@Url.Action("AuthorizationPage", "Register")"
+                                       class="nav-dropdown-link w-dropdown-link">Login</a>
+                                    <a href="@Url.Action("RegisterPage", "Register")"
+                                       class="nav-dropdown-link w-dropdown-link">Register</a>
+                                </nav>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("ContactUs", "Home")" class="nav-link last-item">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="menu-button w-nav-button">
+                    <div class="nav-bar-icon w-icon-nav-menu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

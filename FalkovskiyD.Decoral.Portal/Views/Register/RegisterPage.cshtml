@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section styles
+{
+    <link href="~/css/webflow-style.css" rel="stylesheet" type="text/css" />
+}
+
+<head>
+    <title>Register</title>
+</head>
+
+<div class="breadcrumb-section wf-section">
+    @{
+        Html.RenderPartial("Menu/_MainMenu");
+    }
+    <div class="container w-container">
+        <div class="breadcrumb-wrapper">
+            <h1 class="breadcrumb-title">Register</h1>
+            <div class="breadcrumb-link-block">
+                <a href="/" class="breadcrumb-backlink">Home</a>
+                <div class="line-shape-block"></div>
+                <div class="current-page-name">register</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="register-section wf-section">
+    <div class="container w-container">
+        <div class="login-wrapper">
+            <div class="login-left-side">
+                <div class="login-top">
+                    <h2 class="login-title">Create Account</h2>
+                    <p data-w-id="442deb3e-6289-ef56-034f-d3952875c0ea"
+                       style="opacity: 0"
+                       class="login-details">
+                        Decoral is one of the most popular Interior design agency for
+                        those who want to explore the wold and try to make
+                        adventure.<br />
+                    </p>
+                </div>
+                <div class="login-form-block">
+                    <div class="form-block w-form">
+                        <form id="wf-form-Login-Form"
+                            name="wf-form-Login-Form"
+                            data-name="Login Form"
+                            method="post"
+                            action="registeruser"
+                            class="login-form">
+                            <input type="text"
+                                   class="form-field w-input"
+                                   maxlength="256"
+                                   name="name"
+                                   data-name="Name"
+                                   placeholder="Username"
+                                   id="name"
+                                   required="" /><input type="email"
+                                                        class="form-field w-input"
+                                                        maxlength="256"
+                                                        name="Email"
+                                                        data-name="Email"
+                                                        placeholder="Email"
+                                                        id="Email"
+                                                        required="" /><input type="password"
+                                                                             class="form-field w-input"
+                                                                             maxlength="256"
+                                                                             name="Password"
+                                                                             data-name="Password"
+                                                                             placeholder="Password"
+                                                                             id="Password-2"
+                                                                             required="" /><input type="password"
+                                                                                                  class="form-field w-input"
+                                                                                                  maxlength="256"
+                                                                                                  name="confirmPassword"
+                                                                                                  data-name="confirmPassword"
+                                                                                                  placeholder="confirmPassword"
+                                                                                                  id="confirmPassword"
+                                                                                                  required="" />
+                            <div class="forget-password-block register-block">
+                                <label class="w-checkbox form-checkbox">
+                                    <input type="checkbox"
+                                           name="Checkbox"
+                                           id="Checkbox"
+                                           data-name="Checkbox"
+                                           required=""
+                                           class="w-checkbox-input checkbox" /><span class="checkbox-label w-form-label"
+                                                                                     for="Checkbox">I agree with the</span>
+                                </label><a href="#" class="forget-password register-page">Terms &amp; Conditions</a>
+                            </div>
+                            <div class="button-block register-page">
+                                <input type="submit"
+                                       value="Register"
+                                       data-wait="Please wait..."
+                                       class="button-primary w-button" />
+                                <div class="already-account">
+                                    Already have an Account?
+                                </div>
+                                <a href="" class="register-link register-page">Login</a>
+                            </div>
+                        </form>
+                        <div class="w-form-done">
+                            <div>Thank you! Your submission has been received!</div>
+                        </div>
+                        <div class="w-form-fail">
+                            <div>
+                                Oops! Something went wrong while submitting the form.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="login-right-side">
+                <div class="banner-block-right">
+                    <div class="image-wrapper animate-in">
+                        <div class="image-overlay"></div>
+                        <img src="~/images/image-3.jpg"
+                             loading="lazy"
+                             srcset="
+                      ~/images/image-3-p-500.jpg 500w,
+                      ~/images/image-3.jpg       526w
+                    "
+                             alt="banner image"
+                             sizes="(max-width: 479px) 94vw, (max-width: 740px) 71vw, (max-width: 991px) 526px, (max-width: 1279px) 455.6875px, 526px"
+                             class="media-fit-image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
