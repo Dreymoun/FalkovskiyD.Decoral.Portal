@@ -83,7 +83,7 @@ namespace FalkovskiyD.Decoral.Portal.Controllers
                 await System.IO.File.AppendAllTextAsync(logPath, errorMessage);
             }
 
-            return RedirectToAction("RegisterPage");
+            return RedirectToAction("AuthorizationPage");
         }
 
         // Метод для выхода пользователя
@@ -93,6 +93,65 @@ namespace FalkovskiyD.Decoral.Portal.Controllers
             HttpContext.Response.Cookies.Delete("UserName");
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpPost]
+        [Route("authorize")]
+        public async Task<IActionResult> Authorize(string name, string password)
+        {
+            string usersDataPath = Path.Combine(_webHostEnvironment.WebRootPath, "userinfo.txt");
+            string logPath = Path.Combine(_webHostEnvironment.WebRootPath, "logs.txt");
+            try
+            {
+                // Проверка существует ли файл с пользователями
+                if (!System.IO.File.Exists(usersDataPath))
+                {
+                    TempData["Message"] = "Ошибка авторизации: файл пользователей не найден.";
+                    TempData["MessageClass"] = "error";
+                    return View("AuthorizationPage");
+                }
+
+                // Чтение и поиск пользователя
+                var usersData = await System.IO.File.ReadAllLinesAsync(usersDataPath);
+                var userRecord = usersData.FirstOrDefault(u => u.StartsWith($"{name},"));
+
+                if (userRecord != null)
+                {
+                    var userInfo = userRecord.Split(',');
+                    if (userInfo.Length == 3 && userInfo[2] == password) // Индекс 2, потому что пароль находится на третьей позиции после имени и email
+                    {
+                        // Запись в куки
+                        HttpContext.Response.Cookies.Append("UserName", name, new CookieOptions
+                        {
+                            HttpOnly = true,
+                            Expires = DateTimeOffset.Now.AddDays(7)
+                        });
+
+                        // Логирование
+                        string logMessage = $"Пользователь {name} успешно авторизован.\n";
+                        await System.IO.File.AppendAllTextAsync(logPath, logMessage);
+
+                        // Редирект на главную страницу или другую страницу
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+
+                TempData["Message"] = "Ошибка авторизации: неверное имя пользователя или пароль.";
+                TempData["MessageClass"] = "error";
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Ошибка при авторизации пользователя: {Name}", name);
+
+                // Логирование ошибки
+                string errorMessage = $"Ошибка при авторизации пользователя {name}: {ex.Message}\n";
+                await System.IO.File.AppendAllTextAsync(logPath, errorMessage);
+
+                TempData["Message"] = "Ошибка при авторизации. Попробуйте позже.";
+                TempData["MessageClass"] = "error";
+            }
+            return View("AuthorizationPage");
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

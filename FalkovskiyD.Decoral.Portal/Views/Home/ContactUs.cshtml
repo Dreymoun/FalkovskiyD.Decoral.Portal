@@ -86,7 +86,8 @@
                     <form id="email-form"
                           name="email-form"
                           data-name="Email Form"
-                          method="get"
+                          method="post"
+                          action="@Url.Action("ContactUs", "Home")"
                           class="agency-form">
                         <input type="text"
                                class="form-field w-node-e6e2ea25-b51f-b27b-341f-55baa554db5f-0480df9f w-input"
@@ -105,22 +106,27 @@
                                                     required="" /><input type="email"
                                                                          class="form-field w-node-e6e2ea25-b51f-b27b-341f-55baa554db62-0480df9f w-input"
                                                                          maxlength="256"
-                                                                         name="Email-4"
-                                                                         data-name="Email 4"
+                                                                         name="email4"
+                                                                         data-name="email4"
                                                                          placeholder="Email Address"
-                                                                         id="Email-4"
+                                                                         id="email4"
                                                                          required="" /><textarea placeholder="Write here"
                                                                                                  maxlength="5000"
                                                                                                  id="field-2"
                                                                                                  name="field-2"
                                                                                                  data-name="Field 2"
                                                                                                  required=""
-                                                                                                 class="form-field form-textarea max-height-200px w-node-e6e2ea25-b51f-b27b-341f-55baa554db63-0480df9f w-input"></textarea><input type="submit"
-                                                                                                                                                                                                                                  value="Send now"
-                                                                                                                                                                                                                                  data-wait="Please wait..."
-                                                                                                                                                                                                                                  id="w-node-e6e2ea25-b51f-b27b-341f-55baa554db64-0480df9f"
-                                                                                                                                                                                                                                  class="button-primary contact-button w-button" />
+                                                                                                 class="form-field form-textarea max-height-200px w-node-e6e2ea25-b51f-b27b-341f-55baa554db63-0480df9f w-input"></textarea>
+                                                                                                 <input type="submit" 
+                                                                                                     value="Send now" 
+                                                                                                     data-wait="Please wait..." 
+                                                                                                     id="w-node-e6e2ea25-b51f-b27b-341f-55baa554db64-0480df9f" 
+                                                                                                     class="button-primary contact-button w-button" />
                     </form>
+                    @if (TempData["Message"] != null)
+                    {
+                        <div class="@TempData["MessageClass"]">@TempData["Message"]</div>
+                    }
                     <div class="w-form-done">
                         <div>Thank you! Your submission has been received!</div>
                     </div>

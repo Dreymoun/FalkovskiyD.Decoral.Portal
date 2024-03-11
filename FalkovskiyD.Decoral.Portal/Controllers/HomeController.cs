@@ -26,10 +26,46 @@ namespace FalkovskiyD.Decoral.Portal.Controllers
         {
             return View();
         }
+
+        [HttpGet]
         public IActionResult ContactUs()
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> ContactUs(string firstName, string phone, string email4, string message)
+        {
+            string logPath = Path.Combine(_webHostEnvironment.WebRootPath, "logs.txt");
+
+            try
+            {
+                // Проверка валидности email
+                if (string.IsNullOrEmpty(email4) || !Regex.IsMatch(email4, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"))
+                {
+                    TempData["Message"] = "Пожалуйста, проверьте введенный электронный адрес.";
+                    TempData["MessageClass"] = "error";
+                    return View();
+                }
+
+                // Запись в лог-файл
+                string logMessage = $"Пользователь {email4} отправил сообщение: {message}\n";
+                await System.IO.File.AppendAllTextAsync(logPath, logMessage);
+
+                TempData["Message"] = "Ваше сообщение отправлено.";
+                TempData["MessageClass"] = "success";
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Ошибка при отправке сообщения пользователем: {Email}", email4);
+                TempData["Message"] = "Произошла ошибка при отправке сообщения.";
+                TempData["MessageClass"] = "error";
+            }
+
+            // Здесь вы можете вернуться на ту же страницу, чтобы показать сообщение
+            return View();
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Subscribe(string email)
