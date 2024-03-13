@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutSectionTitle" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="ContactTitle" xml:space="preserve">
+    <value>Свяжитесь с нами, чтобы начать дизайн</value>
+  </data>
+  <data name="WelcomeSubtitle" xml:space="preserve">
+    <value>ДОБРО ПОЖАЛОВАТЬ В DECORAL</value>
+  </data>
+  <data name="WelcomeTitle" xml:space="preserve">
+    <value>Дизайн интерьера с другим подходом</value>
+  </data>
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>Decoral является одним из самых популярных дизайн-агентств для тех, кто планирует путешествия и исследование мира.</value>
+  </data>
+  <data name="ContactUsButton" xml:space="preserve">
+    <value>Связаться с нами</value>
+  </data>
+  <data name="ServiceSectionTitle" xml:space="preserve">
+    <value>Мы предлагаем различные виды интерьерного дизайна</value>
+  </data>
+  <data name="ServiceHomeInterior" xml:space="preserve">
+    <value>Домашний интерьер</value>
+  </data>
+  <data name="ServiceSummaryText" xml:space="preserve">
+    <value>Decoral особенно ценится теми, кто знает его преимущества.</value>
+  </data>
+  <data name="ServiceOfficeInterior" xml:space="preserve">
+    <value>Офисный интерьер</value>
+  </data>
+  <data name="ServiceRestaurantInterior" xml:space="preserve">
+    <value>Интерьер ресторана</value>
+  </data>
+  <data name="ServiceSpacePlanning" xml:space="preserve">
+    <value>Планирование пространства</value>
+  </data>
+  <data name="ServiceFurnitureSolutions" xml:space="preserve">
+    <value>Решения для мебели</value>
+  </data>
+  <data name="ServiceColorDesign" xml:space="preserve">
+    <value>Цветовой дизайн</value>
+  </data>
+  <data name="FeatureSectionTitle" xml:space="preserve">
+    <value>Почему люди выбирают Decoral</value>
+  </data>
+  <data name="FeatureModernDesign" xml:space="preserve">
+    <value>Современный дизайн</value>
+  </data>
+  <data name="FeatureExpertTeam" xml:space="preserve">
+    <value>Команда экспертов</value>
+  </data>
+  <data name="FeatureReasonablePrice" xml:space="preserve">
+    <value>Разумная цена</value>
+  </data>
+  <data name="ProjectSectionTitle" xml:space="preserve">
+    <value>Ознакомьтесь с нашими последними проектами</value>
+  </data>
+  <data name="ProjectModernKitchenDesign" xml:space="preserve">
+    <value>Современный дизайн кухни</value>
+  </data>
+  <data name="ProjectCompletedText" xml:space="preserve">
+    <value>Decoral является одной из наиболее известных компаний в этой области.</value>
+  </data>
+  <data name="TestimonialSectionTitle" xml:space="preserve">
+    <value>Отзывы наших счастливых клиентов</value>
+  </data>
+  <data name="TestimonialText" xml:space="preserve">
+    <value>"Decoral - это самое популярное туристическое агентство для тех, кто хочет исследовать мир и отправиться в новые приключения, предлагая лучший дизайн."</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>Боб Уильямс</value>
+  </data>
+  <data name="ClientPosition" xml:space="preserve">
+    <value>Корпорация Вергон</value>
+  </data>
+  <data name="BlogSectionTitle" xml:space="preserve">
+    <value>Последние записи из нашего блога</value>
+  </data>
+  <data name="BlogInteriorDesignPost" xml:space="preserve">
+    <value>Семь советов, как улучшить ваш интерьерный дизайн и концепцию</value>
+  </data>
+  <data name="BlogReadMore" xml:space="preserve">
+    <value>Читать далее</value>
+  </data>
+  <data name="BlogPostDate" xml:space="preserve">
+    <value>11 октября 2021 года</value>
+  </data>
+  <data name="BlogPostAuthor" xml:space="preserve">
+    <value>Автор - Аллен Блик</value>
+  </data>
+  <data name="FooterAboutTitle" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="FooterAboutDescription" xml:space="preserve">
+    <value>Decoral - это туристическое агентство, которое предлагает лучший дизайн для тех, кто стремится исследовать мир и открывать новые направления.</value>
+  </data>
+  <data name="FooterContactTitle" xml:space="preserve">
+    <value>Контактная информация</value>
+  </data>
+  <data name="FooterContactAddress" xml:space="preserve">
+    <value>Адрес: 75 North Street, New York, NY 1010, USA</value>
+  </data>
+  <data name="FooterContactEmail" xml:space="preserve">
+    <value>Email: Info@example.com</value>
+  </data>
+  <data name="FooterSocialTitle" xml:space="preserve">
+    <value>Социальные сети</value>
+  </data>
+  <data name="FooterCopyRight" xml:space="preserve">
+    <value>© 2024 Decoral. Все права защищены.</value>
+  </data>
+  <data name="FeatureText" xml:space="preserve">
+    <value>Decoral является самым популярным для тех кто хочет исследовать </value>
+  </data>
+  <data name="ProjectSummary" xml:space="preserve">
+    <value>Decoral самый популярный для</value>
+  </data>
+</root>

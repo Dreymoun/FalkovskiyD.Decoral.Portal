@@ -1,5 +1,6 @@
 using FalkovskiyD.Decoral.Portal.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -32,7 +33,21 @@ namespace FalkovskiyD.Decoral.Portal.Controllers
         {
             return View();
         }
+        // Метод для установки культуры и перенаправления на предыдущий URL
+        [HttpPost]
+        public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+            if (!string.IsNullOrWhiteSpace(culture))
+            {
+                Response.Cookies.Append(
+                    CookieRequestCultureProvider.DefaultCookieName,
+                    CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                    new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+                );
+            }
 
+            return LocalRedirect(returnUrl);
+        }
         [HttpPost]
         public async Task<IActionResult> ContactUs(string firstName, string phone, string email4, string message)
         {

@@ -25,6 +25,12 @@
                            required />
                     <input type="submit" value="Subscribe" class="subscribe-button w-button" />
                 </form>
+                @if (TempData["Message"] != null)
+                {
+                    <div class="@TempData["MessageClass"]">
+                        @TempData["Message"]
+                    </div>
+                }
                 <div id="subscribe-message"></div>
                 <div class="w-form-done">
                     <div>Thank you! Your submission has been received!</div>
@@ -35,10 +41,5 @@
             </div>
         </div>
     </div>
-        @if (TempData["Message"] != null)
-        {
-            <div class="@TempData["MessageClass"]">
-                @TempData["Message"]
-            </div>
-        }
+        
 </section>

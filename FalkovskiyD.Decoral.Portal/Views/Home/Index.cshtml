@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer;
+
+@{
     Layout = "_HomeLayout";
 }
 
@@ -22,7 +25,7 @@
                 </div>
                 <div class="contact-block">
                     <h3 class="about-contact-title">
-                        Let’s Start the Design, Call us
+                        @Localizer["ContactTitle"]
                     </h3>
                     <a href="tel:+12345678912" class="about-contact-number">+12345 678 912</a>
                 </div>
@@ -30,12 +33,10 @@
             <div class="about-right">
                 <div class="about-title-block">
                     <div class="section-title">
-                        <div class="subtitle home-page">WELCOME TO DECORAL</div>
+                        <div class="subtitle home-page">@Localizer["WelcomeSubtitle"]</div>
                         <h2 class="title">Intetior Design with Different Approach</h2>
                         <p class="section-pragraph">
-                            Decoral is one of the most popular Travel agency for those
-                            who want to explore the wold and try to make adventure
-                            provide the best design
+                            @Localizer["WelcomeMessage"]
                         </p>
                         <a href="~//contact" class="button-primary mt-35px w-button">Contact Us</a>
                     </div>
@@ -61,7 +62,7 @@
         <div class="service-title-block">
             <div class="section-title">
                 <h2 class="title">
-                    We provide different types of Interior design
+                    @Localizer["ServiceSectionTitle"]
                 </h2>
             </div>
         </div>
@@ -104,8 +105,7 @@
                                 <a href="/service/home-interior"
                                    class="service-link-block w-inline-block"><h3 class="service-link">Home Interior</h3></a>
                                 <p class="service-summary-text">
-                                    Decoral is one of the most popular for for those who
-                                    want to explore the
+                                    @Localizer["ServiceSummaryText"]
                                 </p>
                                 <div class="bottom-divider"></div>
                             </div>
@@ -138,8 +138,7 @@
                                 <a href="/service/office-interior"
                                    class="service-link-block w-inline-block"><h3 class="service-link">Office Interior</h3></a>
                                 <p class="service-summary-text">
-                                    Decoral is one of the most popular for for those who
-                                    want to explore the
+                                    @Localizer["ServiceSummaryText"]
                                 </p>
                                 <div class="bottom-divider"></div>
                             </div>
@@ -172,8 +171,7 @@
                                 <a href="/service/restaurant-interior"
                                    class="service-link-block w-inline-block"><h3 class="service-link">Restaurant Interior</h3></a>
                                 <p class="service-summary-text">
-                                    Decoral is one of the most popular for for those who
-                                    want to explore the
+                                    @Localizer["ServiceSummaryText"]
                                 </p>
                                 <div class="bottom-divider"></div>
                             </div>
@@ -210,8 +208,7 @@
                                 <a href="/service/space-planing"
                                    class="service-link-block w-inline-block"><h3 class="service-link">Space Planing</h3></a>
                                 <p class="service-summary-text">
-                                    Decoral is one of the most popular for for those who
-                                    want to explore the
+                                    @Localizer["ServiceSummaryText"]
                                 </p>
                                 <div class="bottom-divider"></div>
                             </div>
@@ -244,8 +241,7 @@
                                 <a href="/service/furniture-solutions"
                                    class="service-link-block w-inline-block"><h3 class="service-link">Furniture Solutions</h3></a>
                                 <p class="service-summary-text">
-                                    Decoral is one of the most popular for for those who
-                                    want to explore the
+                                    @Localizer["ServiceSummaryText"]
                                 </p>
                                 <div class="bottom-divider"></div>
                             </div>
@@ -278,8 +274,7 @@
                                 <a href="/service/color-design"
                                    class="service-link-block w-inline-block"><h3 class="service-link">Color Design</h3></a>
                                 <p class="service-summary-text">
-                                    Decoral is one of the most popular for for those who
-                                    want to explore the
+                                    @Localizer["ServiceSummaryText"]
                                 </p>
                                 <div class="bottom-divider"></div>
                             </div>
@@ -297,13 +292,12 @@
                 <div class="feature-title-block">
                     <div class="section-title">
                         <h2 class="title feature-section-title">
-                            Why people choose Decoral
+                            @Localizer["FeatureSectionTitle"]
                         </h2>
                         <p data-w-id="0b999b92-e1a2-36fc-23b4-9507e7cbcb30"
                            style="opacity: 0"
                            class="section-pragraph">
-                            Decoral is one of the most popular Travel agency for those
-                            who want to explore the wold and try
+                            @Localizer["FeatureText"]
                         </p>
                     </div>
                 </div>
@@ -313,10 +307,9 @@
                          alt="Feature Icon"
                          class="feature-icon" />
                     <div class="feature-content">
-                        <h3 class="feature-title">Modern Design</h3>
+                        <h3 class="feature-title">@Localizer["FeatureModernDesign"]</h3>
                         <p class="feature-text">
-                            Decoral is one of the most popular for for those who want to
-                            explore the
+                            @Localizer["FeatureText"]
                         </p>
                     </div>
                 </div>
@@ -347,10 +340,9 @@
                              alt="Feature Icon"
                              class="feature-icon" />
                         <div class="feature-content">
-                            <h3 class="feature-title">Expert Team</h3>
+                            <h3 class="feature-title">@Localizer["FeatureExpertTeam"]</h3>
                             <p class="feature-text">
-                                Decoral is one of the most popular for for those who want
-                                to explore the
+                                @Localizer["FeatureText"]
                             </p>
                         </div>
                     </div>
@@ -360,10 +352,9 @@
                              alt="Feature Icon"
                              class="feature-icon" />
                         <div class="feature-content">
-                            <h3 class="feature-title">Reasonable Price</h3>
+                            <h3 class="feature-title">@Localizer["FeatureReasonablePrice"]</h3>
                             <p class="feature-text">
-                                Decoral is one of the most popular for for those who want
-                                to explore the
+                                @Localizer["FeatureText"]
                             </p>
                         </div>
                     </div>
@@ -424,11 +415,11 @@
                                             <a href="/project/modern-kitchen-design"
                                                class="project-link-block w-inline-block">
                                                 <h3 class="project-title">
-                                                    Modern Kitchen Design
+                                                    @Localizer["ProjectModernKitchenDesign"]
                                                 </h3>
                                             </a>
                                             <p class="project-summary">
-                                                Decoral is one of the most popular for
+                                                @Localizer["ProjectSummary"]
                                             </p>
                                         </div>
                                     </div>
@@ -441,7 +432,7 @@
                     <div class="project-title-block">
                         <div class="section-title">
                             <h2 class="title feature-section-title">
-                                Let’s check<br />our latest Projects
+                                @Localizer["ProjectSectionTitle"]
                             </h2>
                         </div>
                     </div>
@@ -604,9 +595,7 @@
                                          alt="Rating Image"
                                          class="rating-image" />
                                     <p class="testimonial-text">
-                                        “Decoral is one of the most popular Travel agency for
-                                        those who want to explore the wold and try to make
-                                        adventure provide the best design”
+                                        @Localizer["TestimonialText"]
                                     </p>
                                     <div class="client-meta">
                                         <img src="~/images/author.jpg"

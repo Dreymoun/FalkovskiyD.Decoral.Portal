@@ -1,5 +1,15 @@
 ﻿<div class="container w-container">
     <div class="header-top">
+        <div class="language-selector">
+            <form asp-action="SetLanguage" asp-controller="Home" asp-route-returnUrl="@Context.Request.Path" method="post" style="color: black;">
+                    <select name="culture" onchange="this.form.submit();"> 
+                        <option value="en">English</option>
+                        <option value="ru">Русский</option>
+                        <option value="kk-KZ">Қазақ</option>
+                    </select>
+                    <button type="submit" name="culture" value="en">Global Version</button>
+                </form>
+        </div>
         <div>
             Call us:
             <a href="tel:12345678910" class="header-contact-number">+012345 678 910</a>
